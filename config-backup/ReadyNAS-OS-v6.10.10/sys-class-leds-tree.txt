@@ -1,0 +1,6 @@
+d /sys/class/leds
+l /sys/class/leds/act
+l /sys/class/leds/pwr
+l /sys/class/leds/sata1
+l /sys/class/leds/sata2
+l /sys/class/leds/backup

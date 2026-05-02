@@ -1,0 +1,3 @@
+d /sys/class/hwmon
+l /sys/class/hwmon/hwmon0
+l /sys/class/hwmon/hwmon1

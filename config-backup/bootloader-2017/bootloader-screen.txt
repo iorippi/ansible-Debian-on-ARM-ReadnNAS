@@ -1,0 +1,56 @@
+Annapurna Labs stage 2: stage2_eth3_ram_loader v1.49.9
+Executing next!
+Annapurna Labs stage 2: stage2.5_loader v1.49.9
+SPD I2C Address:00000050
+Executing next!
+
+
+Stage 3 2013.10-alpine_spl-1.49.d-00659-ge082932 (Nov 19 2014 - 16:21:12)
+
+DRAM:  2 GiB
+EEPROM Revision ID = 32
+Device ID = a214
+Device Info: AL21400-1400
+Loading DT to 00100000 (16813 bytes)...
+Board config ID: Netgear NAS RN20x
+SRAM agent up: agent_wakeup v1.49
+Loading U-Boot to 00100000 (491592 bytes)...
+Executing U-Boot...
+
+
+U-Boot 2013.10-alpine_db-1.49 (Dec 21 2017 - 13:28:38)
+12/21/2017 ReadyNAS-200 V1.2 
+
+Annapurna Labs
+Board: Alpine Development Board
+I2C:   ready
+DRAM:  2 GiB
+eeprom_per_device_init: no valid information found!
+power_init_board: EEPROM per device information is not valid - using defaults!
+Board config ID: Netgear NAS RN20x
+dt_based_init: ETH params initialization failed!
+ac_adapter_plug_in = 0
+NAND:  128 MiB
+  00:01.0     - 1c36:0001 - Network controller
+  00:03.0     - 1c36:0001 - Network controller
+  00:04.0     - 1c36:0011 - Cryptographic device
+  00:05.0     - 1c36:0021 - Base system peripheral
+  00:09.0     - 1c36:0031 - Mass storage controller
+PCIE_0: Link up. Speed 5GT/s Width x1
+  01:00.0     - 1b21:0612 - Mass storage controller
+PCIE_1: Link up. Speed 5GT/s Width x1
+  02:00.0     - 1b6f:7052 - Serial bus controller
+In:    serial
+Out:   serial
+Err:   serial
+Net:   , al_eth1 [PRIME], al_eth3
+mn=00, hr=00, dt=01
+Power On!
+Found 2 Disks!
+Hit any key to stop autoboot:  0
+ALPINE_DB> version 
+
+U-Boot 2013.10-alpine_db-1.49 (Dec 21 2017 - 13:28:38)
+12/21/2017 ReadyNAS-200 V1.2 
+arm-linux-gnueabihf-gcc ( 4.9.2-10) 4.9.2
+GNU ld (GNU Binutils for Debian) 2.25

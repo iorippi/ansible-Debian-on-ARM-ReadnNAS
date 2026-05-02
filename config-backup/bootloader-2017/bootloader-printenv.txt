@@ -1,0 +1,107 @@
+ALPINE_DB> printenv
+Manufacturer=NETGEAR
+Product=ReadyNAS 212
+SKUNum=RN212
+SerialNum=<redacted>
+UUID=<redacted>
+Version=V1.2 
+arch=arm
+autoload=n
+baudrate=115200
+board=alpine_db
+board_name=alpine_db
+boot_instance_active=0
+boot_instance_non_active=1
+bootargsextra=bdtype=rn202
+bootargshd=run rootargshd; setenv bootargs $rootargs pci=pcie_bus_perf console=ttyS0,115200 $bootargsextra; printenv bootargs
+bootargsnand=run rootargsnand; setenv bootargs $rootargs pci=pcie_bus_perf console=ttyS0,115200 $bootargsextra; printenv bootargs
+bootargsnfs=run rootargsnfs; setenv bootargs $rootargs pci=pcie_bus_perf console=ttyS0,115200 $bootargsextra; printenv bootargs
+bootcmd=run bootargsnand; run bootnand
+bootdelay=3
+bootext4=lcd_print "Booting...";scsi init; ext4load scsi ${ext4dev}:${ext4part} $loadaddr ${ext4dir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr_dt $loadaddr;if test $? -ne 0; then run fail; exit; fi;fi;ext4load scsi ${ext4dev}:${ext4part} $loadaddr ${ext4dir}uImage;if test $? -ne 0; then run fail; exit; fi;fdt addr $loadaddr_dt;bootm $loadaddr - $fdtaddr;run fail; exit
+bootnand=lcd_print "Booting...";nand set_partition_offset $nand_pt_addr_kernel;nand read $loadaddr $nand_pt_addr_kernel 4;setenvmem filesize $loadaddr;incenv filesize 4;nand read $loadaddr $nand_pt_addr_kernel $filesize;nand set_partition_offset $nand_pt_addr_al_boot;bootm $loadaddr_payload - $fdtaddr;lcd_print Failed!;failue;
+bootnandmulti=run kernel_select;if test $kernel_selected -ne 0; then run bootnand; fi
+boottftp=lcd_print "Booting...";tftpboot $loadaddr ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr_dt $loadaddr;if test $? -ne 0; then run fail; exit; fi;fi;tftpboot $loadaddr ${tftpdir}uImage;if test $? -ne 0; then run fail; exit; fi;fdt addr $loadaddr_dt;bootm $loadaddr - $fdtaddr;run fail; exit
+bootupd=is_nand_boot; if test $? -eq 0; then run bootupdspi; else; run bootupdnand; fi
+bootupdnand=lcd_print "Updating al-boot" "to NAND"; tftpboot $loadaddr_dt ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;tftpboot $loadaddr ${tftpdir}boot.img; if test $? -ne 0; then run fail; exit; fi;nand set_partition_offset $nand_pt_addr_al_boot;nand erase.spread $nand_pt_addr_al_boot $filesize; nand write $loadaddr $nand_pt_addr_al_boot $filesize; nand erase.spread ${dt_location} 10000; nand write ${loadaddr_dt} ${dt_location} 10000; lcd_print "Done"
+bootupdnandy=lcd_print "Updating al-boot" "to NAND"; echo >> Use YModem to upload the device tree binary...;loady $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;echo >> Use YModem to upload the boot image binary...;loady $loadaddr;if test $? -ne 0; then run fail; exit; fi;nand set_partition_offset $nand_pt_addr_al_boot;nand erase.spread $nand_pt_addr_al_boot $filesize; nand write $loadaddr $nand_pt_addr_al_boot $filesize; nand erase.spread ${dt_location} 10000; nand write ${loadaddr_dt} ${dt_location} 10000;lcd_print "Done"
+bootupdspi=lcd_print "Updating al-boot" "to SPI"; tftpboot $loadaddr_dt ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;setenv filesize_dt $filesize;tftpboot ${loadaddr} ${tftpdir}boot.img; if test $? -ne 0; then run fail; exit; fi;sf probe; sf erase 0 +${filesize}; sf write ${loadaddr} 0 ${filesize}; sf erase ${dt_location} +${filesize_dt}; sf write ${loadaddr_dt} ${dt_location} ${filesize_dt}; echo bootupd done;echo Notice: Changes in default environment variables will only take effect once the;echo environment variables are deleted from flash using the 'delenv' script;lcd_print "Done"
+bootupdspiy=lcd_print "Updating al-boot" "to SPI"; echo >> Use YModem to upload the device tree binary...;loady $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;setenv filesize_dt $filesize;echo >> Use YModem to upload the boot image binary...;loady ${loadaddr};if test $? -ne 0; then run fail; exit; fi;sf probe; sf erase 0 +${filesize}; sf write ${loadaddr} 0 ${filesize}; sf erase ${dt_location} +${filesize_dt}; sf write ${loadaddr_dt} ${dt_location} ${filesize_dt};echo bootupd done;echo Notice: Changes in default environment variables will only take effect once the;echo environment variables are deleted from flash using the 'delenv' script;lcd_print "Done"
+bootupdy=is_nand_boot; if test $? -eq 0; then run bootupdspiy;else; run bootupdnandy; fi
+build_date=12/21/2017 
+cpu=armv7
+cvos_tags=0x01000000
+cvos_tags_seed_a=0x01000004
+cvos_tags_seed_b=0x01000008
+cvos_tags_validate=mw.l ${cvos_tags} 0xcf05cf05
+delenv=is_nand_boot; if test $? -eq 0; then run delenvspi; else; run delenvnand; fi
+delenvnand=lcd_print "Deleting env..."; nand erase ${env_offset} 2000; if test -n ${env_offset_redund}; then nand erase ${env_offset_redund} 2000; fi;lcd_print "Done"
+delenvspi=lcd_print "Deleting env..."; sf probe; sf erase ${env_offset} +2000;if test -n ${env_offset_redund}; then sf erase ${env_offset_redund} +2000;fi;lcd_print "Done"
+dt_filename=dt.img
+dt_is_from_toc=1
+dt_location=80000
+dtupd=is_nand_boot; if test $? -eq 0; then run dtupdspi; else; run dtupdnand; fi
+dtupdnand=lcd_print "Updating DT" "to NAND"; tftpboot $loadaddr_dt ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;nand set_partition_offset $nand_pt_addr_al_boot;nand erase.spread ${dt_location} 10000; nand write ${loadaddr_dt} ${dt_location} 10000; lcd_print "Done"
+dtupdnandy=lcd_print "Updating DT" "to NAND"; echo >> Use YModem to upload the device tree binary...;loady $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;nand set_partition_offset $nand_pt_addr_al_boot;nand erase.spread ${dt_location} 10000; nand write ${loadaddr_dt} ${dt_location} 10000; lcd_print "Done"
+dtupdspi=lcd_print "Updating DT" "to SPI"; tftpboot $loadaddr_dt ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;sf probe; sf erase ${dt_location} +${filesize}; sf write ${loadaddr_dt} ${dt_location} ${filesize};echo dtupd done;lcd_print "Done"
+dtupdspiy=lcd_print "Updating DT" "to SPI"; echo >> Use YModem to upload the device tree binary...;loady $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;sf probe; sf erase ${dt_location} +${filesize}; sf write ${loadaddr_dt} ${dt_location} ${filesize}; echo dtupd done;lcd_print "Done"
+dtupdy=is_nand_boot; if test $? -eq 0; then run dtupdspiy; else; run dtupdnandy; fi
+eepromupd=confirm_msg "Perform EEPROM update? [y/n] ";if test $? -ne 0; then exit; fi;tftpboot ${tftpdir}eeprom.bin;if test $? -ne 0; then exit; fi;i2c probe ${pld_i2c_addr};if test $? -ne 0; then exit; fi;i2c write $fileaddr ${pld_i2c_addr} 0.2 $filesize;if test $? -ne 0; then exit;fi;echo eepromupd done
+eepromupdy=confirm_msg "Perform EEPROM update? [y/n] ";if test $? -ne 0; then exit; fi;echo >> Use YModem to upload the EEPROM binary...;loady $loadaddr;if test $? -ne 0; then exit; fi;i2c probe ${pld_i2c_addr};if test $? -ne 0; then exit; fi;i2c write $loadaddr ${pld_i2c_addr} 0.2 $filesize;if test $? -ne 0; then exit;fi;echo eepromupdy done
+env_offset=1c0000
+env_offset_redund=1e0000
+eth1addr=38:94:ED:B2:13:44
+eth3addr=38:94:ED:B2:13:45
+ethact=al_eth1
+ethprime=al_eth1
+ext4dev=0
+ext4dir=boot/
+ext4part=1
+fail=echo Failed!; lcd_print "Failed!"
+fdt_high=0xffffffff
+fdtaddr=1b25008
+fwupd=tftpboot ${tftpdir}uboot_script_fw_update.bin;source ${loadaddr}
+hdroot=/dev/sda1
+hwsetting_rn202=serdes rx_params_set 2 0  00 07 00 00 08 00 08 07 10;serdes rx_params_set 2 1  00 07 00 00 08 00 08 07 10;serdes rx_params_set 2 2  00 07 00 00 08 00 08 07 10;serdes rx_params_set 2 3  00 07 00 00 08 00 08 07 10;serdes tx_params_set 2 0 1 27 6 0 0;serdes tx_params_set 2 1 1 27 6 0 0;mw.l 0xfc8f821c 0x04000000;mw.l 0xfc9f821c 0x04000000;
+hwsetting_rn204=serdes rx_params_set 2 0  00 07 00 00 08 00 08 07 4;serdes rx_params_set 2 1  00 07 00 00 08 00 08 07 4;serdes rx_params_set 2 2  00 07 00 00 08 00 08 07 4;serdes rx_params_set 2 3  00 07 00 00 08 00 08 07 4;serdes wr 2 p4 pma 13 4 4 0;serdes wr 2 p4 pma 15 2 0 2;serdes tx_params_set 2 0 1 23 4 0 0;serdes tx_params_set 2 1 1 23 4 0 0;serdes tx_params_set 2 2 1 23 4 0 0;serdes tx_params_set 2 3 1 23 4 0 0;mw.l 0xfc9f821c 0x4000000;
+kernel_rename_1=editenv nand_pt_desc_kernel_1;saveenv
+kernel_rename_2=editenv nand_pt_desc_kernel_2;saveenv
+kernel_select=setenv kernel_selected 0;setenv bootmenu_0 ${nand_pt_desc_kernel_1}=run kernel_select_1;setenv bootmenu_1 ${nand_pt_desc_kernel_2}=run kernel_select_2;bootmenu
+kernel_select_1=setenv nand_pt_addr_kernel ${nand_pt_addr_kernel_1};setenv kernel_selected 1
+kernel_select_2=setenv nand_pt_desc_kernel ${nand_pt_desc_kernel_2};setenv nand_pt_addr_kernel ${nand_pt_addr_kernel_2};setenv nand_pt_desc_kernel_2 ${nand_pt_desc_kernel_1};setenv nand_pt_addr_kernel_2 ${nand_pt_addr_kernel_1};setenv nand_pt_desc_kernel_1 ${nand_pt_desc_kernel};setenv nand_pt_addr_kernel_1 ${nand_pt_addr_kernel};saveenv;setenv kernel_selected 2
+kernelupd=lcd_print "Updating kernel...";tftpboot $loadaddr_payload ${tftpdir}uImage;if test $? -ne 0; then run fail; exit; fi;nand set_partition_offset $nand_pt_addr_kernel;mw.l $loadaddr $filesize;incenv filesize 4;nand erase.spread $nand_pt_addr_kernel $filesize;nand write $loadaddr $nand_pt_addr_kernel $filesize;nand set_partition_offset $nand_pt_addr_al_boot;echo kernelupd done;lcd_print "Done"
+loadaddr=0x08000000
+loadaddr_dt=0x07000000
+loadaddr_fs=0x8800000
+loadaddr_payload=0x08000004
+loadaddr_rootfs_chk=0x07000000
+nand_pt_addr_al_boot=0x0
+nand_pt_addr_fs=0x01000000
+nand_pt_addr_kernel=0x00400000
+nand_pt_addr_kernel_1=0x00400000
+nand_pt_addr_kernel_2=0x00a00000
+nand_pt_desc_kernel_1=Test kernel A
+nand_pt_desc_kernel_2=Test kernel B
+nand_pt_size_al_boot=0x00100000
+nand_pt_size_fs=0x3f000000
+nand_pt_size_kernel=0x00c00000
+nfsrootdir=/srv/root/
+odmboot=lcd_print "Booting.."; gpio set 33;bootm $loadaddr $loadaddr_fs $loadaddr_dt;
+odmbootargs=setenv bootargs pci=pcie_bus_perf console=ttyS0,115200 $reasonargs $bootargsextra; printenv bootargs
+odmbootbackusb=usb start;lcd_print "Loading..."; fatload usb 0 $loadaddr uImage-recovery;if test $? -eq 0; then fatload usb 0 $loadaddr_fs initrd-recovery.gz;if test $? -eq 0; then flash_contents_obj_read DT 0 $loadaddr_dt;run odmboot;else;lcd_print "Failed!";failure;fi;else;lcd_print "Failed!";failure;fi;
+odmbootfirmware=nand read $loadaddr 0x200000 0x600000;flash_contents_obj_read DT 0 $loadaddr_dt;nand read $loadaddr_fs 0x800000 0x400000;run odmboot;nand set_partition_offset 0x200000;nand read $loadaddr 0x200000 0x600000;flash_contents_obj_read DT 0 $loadaddr_dt;nand set_partition_offset 0x800000;nand read $loadaddr_fs 0x800000 0x400000;run odmboot;
+odmbootseq=run odmbootargs; run odmbootusb; run odmbootfirmware; run odmbootubi; failure;
+odmbootubi=mtdparts default;ubi part ubifs;ubifsmount ubi0;ubifsload $loadaddr kernel;flash_contents_obj_read DT 0 $loadaddr_dt;ubifsload $loadaddr_fs initrd.gz;run odmboot;
+odmbootusb=usb start;fatload usb 0 $loadaddr NTGR_USBBOOT_INFO.txt;if test $? -eq 0; then run odmbootbackusb;fi;
+pld_i2c_addr=50
+rootargshd=setenv rootargs root=${hdroot} rw
+rootargsnand=setenv rootargs root=ubi0:root rootfstype=ubifs ubi.mtd=3
+rootargsnfs=setenv rootargs root=/dev/nfs rw nfsroot=${serverip}:${nfsrootdir},tcp,nolock rw ip=${ipaddr}:${serverip}:${gatewayip}:${netmask}:${board_name}:eth1:none
+rootfsupd=lcd_print "Updating rootfs...";tftpboot $loadaddr_rootfs_chk ${tftpdir}rootfs.ubi.md5;if test $? -ne 0; then run fail; exit; fi;tftpboot $loadaddr ${tftpdir}rootfs.ubi;if test $? -ne 0; then run fail; exit; fi;md5sum -v $loadaddr $filesize *$loadaddr_rootfs_chk;if test $? -ne 0; then run fail; exit; fi;nand set_partition_offset $nand_pt_addr_fs;nand erase.spread $nand_pt_addr_fs $nand_pt_size_fs;nand write $loadaddr $nand_pt_addr_fs $filesize;nand set_partition_offset $nand_pt_addr_al_boot;echo rootfsupd done;lcd_print "Done"
+skip_eth_halt=0
+soc=alpine
+test=echo this is a test!
+vendor=annapurna-labs
+
+Environment size: 13295/16379 bytes
+ALPINE_DB> 

@@ -1,0 +1,17 @@
+Marvell>> printenv
+AC_Power_fail_detect=open
+CASset=min
+HW_version=MVT
+MALLOC_len=5
+Manufacturer=NETGEAR
+Product=ReadyNAS 102
+SKUNum=RN102
+SerialNum=3ERD54EY00496
+Startup=Normal
+UUID=39c9646a-e292-11e4-a0de-e8fcafe61843
+Version=V1.0
+autoload=no
+...
+vxworks_en=no
+yuk_ethaddr=00:00:00:EE:51:81
+Environment size: 2504/131068 bytes

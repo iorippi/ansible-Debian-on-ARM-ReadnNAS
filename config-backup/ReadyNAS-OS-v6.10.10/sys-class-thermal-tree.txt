@@ -1,0 +1,2 @@
+d /sys/class/thermal
+l /sys/class/thermal/thermal_zone0
