@@ -1,0 +1,70 @@
+  BootROM 1.08
+  Booting from NAND flash
+  General initialization - Version: 1.0.0
+  High speed PHY - Version: 2.1.4 (COM-PHY-V20) 
+  Update PEX Device ID 0x6710
+  High speed PHY - Ended Successfully
+  0000
+  DDR3 Training Sequence - Ver 5.7.1
+  DDR3 Training Sequence - Run without PBS.
+  DDR3 Training Sequence - Ended Successfully 
+  BootROM: Image checksum verification PASSED
+   __   __                      _ _
+  |  \/  | __ _ _ ____   _____| | |
+  | |\/| |/ _` | '__\ \ / / _ \ | |
+  | |  | | (_| | |   \ V /  __/ | |
+  |_|  |_|\__,_|_|    \_/ \___|_|_|
+           _   _     ____              _
+          | | | |   | __ )  ___   ___ | |_ 
+          | | | |___|  _ \ / _ \ / _ \| __| 
+          | |_| |___| |_) | (_) | (_) | |_ 
+           \___/    |____/ \___/ \___/ \__| 
+   ** LOADER **
+  
+  U-Boot 2011.12-gec25d27-dirty (Oct 26 2015 - 16:53:05) Marvell version: v2011.12 2014_T2.0p1 
+  06/23/2015 ReadyNAS-102 V2.0
+  
+  Board: DB-88F6710-BP
+  SoC:   MV6710 A1
+  CPU:   Marvell PJ4B v7 UP (Rev 1) LE
+         CPU    @ 1200 [MHz]
+         L2     @ 600 [MHz]
+         TClock @ 200 [MHz]
+         DDR    @ 600 [MHz]
+         DDR 16Bit Width, FastPath Memory Access
+  DRAM:  512 MiB
+  
+  Map:   Code:		0x1feef000:0x1ff9ef34
+         BSS:		0x1ffef0a0
+         Stack:		0x1f9eeef8
+         Heap:		0x1f9ef000:0x1feef000
+  
+  NAND:  (ID 0xf12c)	128 MiB
+  MMC:   MRVL_MMC: 0
+  Bad block table found at page 65472, version 0x01
+  Bad block table found at page 65408, version 0x01
+  
+  Initialize and scan all PCI interfaces
+  PEX unit.port(active IF[-first bus]):
+  ------------------------------------------
+  PEX 0: Root Complex Interface, Detected Link X1, GEN 2.0
+  PEX 1: Root Complex Interface, Detected Link X1, GEN 2.0
+  FPU not initialized
+  USB 0: Host Mode
+  USB 1: Host Mode
+  Shutting down unused interfaces:
+         GBE0
+         SDIO
+         AUDIO
+         TDM
+  Modules/Interfaces Detected:
+         RGMII1 Phy
+         PEX0 (Lane 0)
+         PEX1 (Lane 1)
+         SATA0 (Lane 2)
+         SATA1 (Lane 3)
+  Net:   , egiga1 [PRIME]
+  Power On!
+  
+  FDT loaded successfully
+  Hit any key to stop autoboot:  0 

@@ -1,0 +1,397 @@
+root@nas-B2-13-44:~# dpkg -l
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name           Version      Architecture Description
++++-==============-============-============-=================================
+ii  acl            2.2.52-2     armel        Access control list utilities
+ii  adduser        3.113+nmu3   all          add and remove users and groups
+ii  apache2        2.4.25-3+deb armel        Apache HTTP Server
+ii  apache2-bin    2.4.25-3+deb armel        Apache HTTP Server (modules and o
+ii  apache2-data   2.4.25-3+deb all          Apache HTTP Server (common files)
+ii  apache2-utils  2.4.25-3+deb armel        Apache HTTP Server (utility progr
+ii  apt            1.2.29+netge armel        commandline package manager
+ii  apt-transport- 1.2.29+netge armel        https download transport for APT
+ii  attr           1:2.4.47-2   armel        Utilities for manipulating filesy
+ii  avahi-daemon   0.6.32-0.net armel        Avahi mDNS/DNS-SD daemon
+ii  avahi-utils    0.6.32-0.net armel        Avahi browsing, publishing and di
+ii  base-files     8+deb8u11    armel        Debian base system miscellaneous 
+ii  base-passwd    3.5.37       armel        Debian base system master passwor
+ii  bash           4.3-11+deb8u armel        GNU Bourne Again SHell
+ii  bind9-host     1:9.9.5.dfsg armel        Version of 'host' bundled with BI
+ii  bsdtar         3.1.2-11+deb armel        Implementation of the 'tar' progr
+ii  bsdutils       1:2.25.2-6.n armel        basic utilities from 4.4BSD-Lite
+ii  btrfs-tools    4.16-netgear armel        Checksumming Copy on Write Filesy
+ii  busybox        1:1.22.0-9+d armel        Tiny utilities for small and embe
+ii  busybox-dnsuti 1:1.22.0-4.n all          DNS utilities
+ii  busybox-less   1:1.22.0-4.n all          pager program similar to more
+ii  busybox-tftp   1:1.22.0-4.n all          TFTP client utility
+ii  busybox-unzip  1:1.22.0-4.n all          De-archiver for .zip files
+ii  ca-certificate 20141019+deb all          Common CA certificates
+ii  cifs-utils     2:6.6-1.netg armel        Common Internet File System utili
+ii  clamav         0.103.7+dfsg armel        anti-virus utility for Unix - com
+ii  clamav-base    0.103.7+dfsg all          anti-virus utility for Unix - bas
+ii  clamav-daemon  0.103.7+dfsg armel        anti-virus utility for Unix - sca
+ii  clamav-freshcl 0.103.7+dfsg armel        anti-virus utility for Unix - vir
+ii  connman        1.37-netgear armel        Intel Connection Manager daemon
+ii  coreutils      8.25-2       armel        GNU core utilities
+ii  cron           3.0pl1-127.n armel        process scheduling daemon
+ii  cryptsetup-bin 2:1.6.6-5    armel        disk encryption support - command
+ii  curl           7.64.0-0.net armel        command line tool for transferrin
+ii  dash           0.5.7-4+b1   armel        POSIX-compliant shell
+ii  dbus           1.8.22-0+deb armel        simple interprocess messaging sys
+ii  dconf-cli      0.22.0-1     armel        simple configuration storage syst
+ii  dconf-gsetting 0.22.0-1     armel        simple configuration storage syst
+ii  dconf-service  0.22.0-1     armel        simple configuration storage syst
+ii  debconf        1.5.56+deb8u all          Debian configuration management s
+ii  debconf-i18n   1.5.56+deb8u all          full internationalization support
+ii  debian-archive 2017.5~deb8u all          GnuPG archive keys of the Debian 
+ii  debianutils    4.4+b1       armel        Miscellaneous utilities specific 
+ii  diffutils      1:3.3-1+b1   armel        File comparison utilities
+ii  dmsetup        2:1.02.90-2. armel        Linux Kernel Device Mapper usersp
+ii  dosfstools     3.0.27-1     armel        utilities for making and checking
+ii  dpkg           1.17.27      armel        Debian package management system
+ii  dropbear       2018.76-netg armel        lightweight SSH2 server and clien
+ii  e2fslibs:armel 1.42.13-1.ne armel        ext2/ext3/ext4 file system librar
+ii  e2fsprogs      1.42.13-1.ne armel        ext2/ext3/ext4 file system utilit
+ii  etherwake      1.09-4       armel        tool to send magic Wake-on-LAN pa
+ii  ethtool        1:3.16-1     armel        display or change Ethernet device
+ii  findutils      4.4.2-9+b1   armel        utilities for finding files--find
+ii  forked-daapd   24.2-0.netge armel        DAAP/DACP (iTunes) server, suppor
+ii  freeapp-collec 1581304664   armel        ReadyNASOS Application Collection
+ii  gcc-4.9-base:a 4.9.2-10+deb armel        GCC, the GNU Compiler Collection 
+ii  gdisk          1.0.4-1.netg armel        GPT fdisk text-mode partitioning 
+ii  glib-networkin 2.42.0-2     armel        network-related giomodules for GL
+ii  glib-networkin 2.42.0-2     all          network-related giomodules for GL
+ii  glib-networkin 2.42.0-2     armel        network-related giomodules for GL
+ii  gnupg          1.4.18-7+deb armel        GNU privacy guard - a free PGP re
+ii  gpgv           1.4.18-7+deb armel        GNU privacy guard - signature ver
+ii  gphoto2        2.5.17-1.net armel        digital camera command-line clien
+ii  grep           2.20-4.1     armel        GNU grep, egrep and fgrep
+ii  gsettings-desk 3.14.1-1     all          GSettings desktop-wide schemas
+ii  gzip           1.6-4        armel        GNU compression utilities
+ii  hdparm         9.43-2       armel        tune hard disk parameters for hig
+ii  hfsprogs       332.25-11    armel        mkfs and fsck for HFS and HFS+ fi
+ii  hostname       3.15         armel        utility to set/show the host name
+ii  init-system-he 1.22         all          helper tools for all init systems
+ii  initscripts    2.88dsf-59   armel        scripts for initializing and shut
+ii  inotify-tools  3.14-1+b1    armel        command-line programs providing a
+ii  insserv        1.14.0-5     armel        boot sequence organizer using LSB
+ii  iptables       1.4.21-2+b1  armel        administration tools for packet f
+ii  kmod           18-3         armel        tools for managing Linux kernel m
+ii  leafp2p:armel  2.2.2        armel        P2P functionality for addons and 
+ii  libacl1:armel  2.2.52-2     armel        Access control list shared librar
+ii  libaio1:armel  0.3.110-1    armel        Linux kernel AIO access library -
+ii  libantlr3c-3.2 3.2-3        armel        ANTLR v3 parser generator C runti
+ii  libapache2-mod 1.0.9        armel        mod_auth_token is a famous apache
+ii  libapache2-mod 3.3.2-0.1.ne armel        authenticate Apache against exter
+ii  libapache2-mod 1.1.0-0.1.ne armel        access control based on on unix g
+ii  libapache2-mod 1.0+netgear1 armel        adds CSRF protection measures for
+ii  libapache2-mod 1.1+netgear1 armel        request parameter parser for Apac
+ii  libapparmor1:a 2.10.95-4~bp armel        changehat AppArmor library
+ii  libapr1:armel  1.5.1-3      armel        Apache Portable Runtime Library
+ii  libaprutil1:ar 1.5.4-1      armel        Apache Portable Runtime Utility L
+ii  libaprutil1-db 1.5.4-1      armel        Apache Portable Runtime Utility L
+ii  libaprutil1-ld 1.5.4-1      armel        Apache Portable Runtime Utility L
+ii  libapt-pkg5.0: 1.2.29+netge armel        package management runtime librar
+ii  libarchive13:a 3.1.2-11+deb armel        Multi-format archive and compress
+ii  libasound2:arm 1.0.28-1     armel        shared library for ALSA applicati
+ii  libasound2-dat 1.0.28-1     all          Configuration files and profiles 
+ii  libattr1:armel 1:2.4.47-2   armel        Extended attribute shared library
+ii  libaudit-commo 1:2.8.5-1.ne all          Dynamic library for security audi
+ii  libaudit1:arme 1:2.8.5-1.ne armel        Dynamic library for security audi
+ii  libavahi-clien 0.6.32-0.net armel        Avahi client library
+ii  libavahi-commo 0.6.32-0.net armel        Avahi common data files
+ii  libavahi-commo 0.6.32-0.net armel        Avahi common library
+ii  libavahi-core7 0.6.32-0.net armel        Avahi's embeddable mDNS/DNS-SD li
+ii  libavcodec57:a 7:3.4.4-netg armel        Library to encode decode multimed
+ii  libavfilter6:a 7:3.4.4-netg armel        FFmpeg filter library.
+ii  libavformat57: 7:3.4.4-netg armel        FFmpeg file format library.
+ii  libavutil55:ar 7:3.4.4-netg armel        FFmpeg avutil library - runtime f
+ii  libbind9-90    1:9.9.5.dfsg armel        BIND9 Shared Library used by BIND
+ii  libblkid1:arme 2.25.2-6.net armel        block device id library
+ii  libbluetooth3: 5.40-0.netge armel        Library to use the BlueZ Linux Bl
+ii  libboost-atomi 1.55.0+dfsg- armel        atomic data types, operations, an
+ii  libboost-syste 1.55.0+dfsg- armel        Operating system (e.g. diagnostic
+ii  libboost-threa 1.55.0+dfsg- armel        portable C++ multi-threading
+ii  libbsd0:armel  0.7.0-2      armel        utility functions from BSD system
+ii  libbz2-1.0:arm 1.0.6-7+deb8 armel        high-quality block-sorting file c
+ii  libc-bin       2.19-18+deb8 armel        GNU C Library: Binaries
+ii  libc6:armel    2.19-18+deb8 armel        GNU C Library: Shared libraries
+ii  libcap-ng0:arm 0.7.4-2.netg armel        An alternate POSIX capabilities l
+ii  libcap2:armel  1:2.24-8     armel        POSIX 1003.1e capabilities (libra
+ii  libcap2-bin    1:2.24-8     armel        POSIX 1003.1e capabilities (utili
+ii  libcgicc5:arme 3.2.9-3.netg armel        C++ class library for writing CGI
+ii  libclamav9:arm 0.103.7+dfsg armel        anti-virus utility for Unix - lib
+ii  libcomerr2:arm 1.42.13-1.ne armel        common error description library
+ii  libconfuse-com 2.7-5+deb8u1 all          Common files for libConfuse
+ii  libconfuse0:ar 2.7-5+deb8u1 armel        Library for parsing configuration
+ii  libcrypto++9   5.6.1-6+deb8 armel        General purpose cryptographic lib
+ii  libcryptsetup4 2:1.6.6-5    armel        disk encryption support - shared 
+ii  libcsv3:armel  3.0.3+dfsg-2 armel        CSV parser and writer library
+ii  libcups2:armel 1.7.5-11+deb armel        Common UNIX Printing System(tm) -
+ii  libcurl3:armel 7.64.0-0.net armel        easy-to-use client-side URL trans
+ii  libcurl3-gnutl 7.64.0-0.net armel        easy-to-use client-side URL trans
+ii  libdaemon0:arm 0.14-6       armel        lightweight C library for daemons
+ii  libdb5.1:armel 5.1.29-5     armel        Berkeley v5.1 Database Libraries 
+ii  libdb5.3:armel 5.3.28-9+deb armel        Berkeley v5.3 Database Libraries 
+ii  libdbus-1-3:ar 1.8.22-0+deb armel        simple interprocess messaging sys
+ii  libdconf1:arme 0.22.0-1     armel        simple configuration storage syst
+ii  libdebconfclie 0.192        armel        Debian Configuration Management S
+ii  libdevmapper1. 2:1.02.90-2. armel        Linux Kernel Device Mapper usersp
+ii  libdns100      1:9.9.5.dfsg armel        DNS Shared Library used by BIND
+ii  libedit2:armel 3.1-20140620 armel        BSD editline and history librarie
+ii  libenca0:armel 1.16-1       armel        Extremely Naive Charset Analyser 
+ii  libevent-2.0-5 2.0.21-stabl armel        Asynchronous event notification l
+ii  libexempi3:arm 2.2.1-2      armel        library to parse XMP metadata (Li
+ii  libexif12:arme 0.6.21-2     armel        library to parse EXIF files
+rc  libexiv2-12    0.23-1       armel        EXIF/IPTC metadata manipulation l
+ii  libexiv2-13:ar 0.24-4.1+deb armel        EXIF/IPTC metadata manipulation l
+ii  libexpat1:arme 2.1.0-6+deb8 armel        XML parsing C library - runtime l
+ii  libffi6:armel  3.1-2+deb8u1 armel        Foreign Function Interface librar
+ii  libflac8:armel 1.3.0-3      armel        Free Lossless Audio Codec - runti
+ii  libgcc1:armel  1:4.9.2-10+d armel        GCC support library
+ii  libgcrypt20:ar 1.6.3-2+deb8 armel        LGPL Crypto library - runtime lib
+ii  libgdbm3:armel 1.8.3-13.1   armel        GNU dbm database routines (runtim
+ii  libgeoip1:arme 1.6.2-4      armel        non-DNS IP-to-country resolver li
+ii  libgflags2v5:a 2.1.2-3~netg armel        commandline flags module for C++ 
+ii  libgif4:armel  4.1.6-11+deb armel        library for GIF images (library)
+ii  libglib2.0-0:a 2.48.0-1~bpo armel        GLib library of C routines
+ii  libgmp10:armel 2:6.0.0+dfsg armel        Multiprecision arithmetic library
+ii  libgnutls-deb0 3.3.30-0+deb armel        GNU TLS library - main runtime li
+ii  libgoogle-glog 0.3.4-2~netg armel        library that implements applicati
+ii  libgpg-error0: 1.17-3       armel        library for common error values a
+ii  libgphoto2-6:a 2.5.19-0.net armel        gphoto2 digital camera library
+ii  libgphoto2-por 2.5.19-0.net armel        gphoto2 digital camera port libra
+ii  libgsasl7      1.8.0-6      armel        GNU SASL library
+ii  libgsf-1-114   1.14.30-2    armel        Structured File Library - runtime
+ii  libgsf-1-commo 1.14.30-2    all          Structured File Library - common 
+ii  libgsoap5:arme 2.8.17-1+deb armel        Runtime libraries for gSOAP
+ii  libgssapi-krb5 1.12.1+dfsg- armel        MIT Kerberos runtime libraries - 
+ii  libhogweed2:ar 2.7.1-5+deb8 armel        low level cryptographic library (
+ii  libid3tag0     0.15.1b-11   armel        ID3 tag reading library from the 
+ii  libidn11:armel 1.29-1+deb8u armel        GNU Libidn library, implementatio
+ii  libinotifytool 3.14-1+b1    armel        utility wrapper around inotify
+ii  libiptcdata0:a 1.0.4-4+0.ne armel        Library to parse IPTC metadata
+ii  libisc95       1:9.9.5.dfsg armel        ISC Shared Library used by BIND
+ii  libisccc90     1:9.9.5.dfsg armel        Command Channel Library used by B
+ii  libisccfg90    1:9.9.5.dfsg armel        Config File Handling Library used
+ii  libjbig0:armel 2.1-3.1      armel        JBIGkit libraries
+ii  libjpeg62-turb 1:1.5.1-2    armel        libjpeg-turbo JPEG runtime librar
+ii  libjson-c2:arm 0.11-4       armel        JSON manipulation library - share
+ii  libjson-glib-1 1.0.2-1      armel        GLib JSON manipulation library
+ii  libjson-glib-1 1.0.2-1      all          GLib JSON manipulation library (c
+ii  libjson7:armel 7.6.1-netgea armel        JSON reader and writer
+ii  libk5crypto3:a 1.12.1+dfsg- armel        MIT Kerberos runtime libraries - 
+ii  libkeyutils1:a 1.5.9-5+b1   armel        Linux Key Management Utilities (l
+ii  libkmod2:armel 18-3         armel        libkmod shared library
+ii  libkrb5-3:arme 1.12.1+dfsg- armel        MIT Kerberos runtime libraries
+ii  libkrb5support 1.12.1+dfsg- armel        MIT Kerberos runtime libraries - 
+ii  libldap-2.4-2: 2.4.40+dfsg- armel        OpenLDAP libraries
+ii  libldb1:armel  2:1.3.8-0.ne armel        LDAP-like embedded database - sha
+ii  libllconf0:arm 0.4.6-netgea armel        lossless configuration file parse
+rc  libllvm3.5:arm 1:3.5-10     armel        Modular compiler and toolchain te
+ii  liblocale-gett 1.05-8+b1    armel        module using libc functions for i
+ii  libltdl7:armel 2.4.6-2      armel        System independent dlopen wrapper
+ii  liblua5.1-0:ar 5.1.5-7.1    armel        Shared library for the Lua interp
+ii  liblua5.2-0:ar 5.2.3-1.1    armel        Shared library for the Lua interp
+ii  liblwres90     1:9.9.5.dfsg armel        Lightweight Resolver Library used
+ii  liblz4-1:armel 0.0~r131-2   armel        Fast LZ compression algorithm lib
+ii  liblz4-tool    0.0~r131-2   armel        Fast LZ compression algorithm lib
+ii  liblzma5:armel 5.1.1alpha+2 armel        XZ-format compression library
+ii  liblzo2-2:arme 2.08-1.2     armel        data compression library
+ii  libmount1:arme 2.25.2-6.net armel        device mounting library
+ii  libmp3lame0:ar 3.99.5+repac armel        MP3 encoding library
+ii  libmspack0:arm 0.5-1+deb8u4 armel        library for Microsoft compression
+ii  libmxml1       2.6-2+deb8u1 armel        small XML parsing library (runtim
+ii  libncurses5:ar 5.9+20140913 armel        shared libraries for terminal han
+ii  libncursesw5:a 5.9+20140913 armel        shared libraries for terminal han
+ii  libnettle4:arm 2.7.1-5+deb8 armel        low level cryptographic library (
+ii  libnfnetlink0: 1.0.1-3      armel        Netfilter netlink library
+ii  libnfsidmap2:a 0.25-5       armel        NFS idmapping library
+ii  libnml         197          armel        ReadyNAS NML library
+ii  libnss-llmnr:a 0.10-netgear armel        NSS module for Link-local Multica
+ii  libnss-mdns:ar 0.10-6       armel        NSS module for Multicast DNS name
+ii  libnss-myhostn 230-7~bpo8+2 armel        nss module providing fallback res
+ii  libnss-winbind 2:4.8.0-12.n armel        Samba nameservice integration plu
+ii  libntfs-3g851  1:2014.2.15A armel        read/write NTFS driver for FUSE
+ii  libntlm0:armel 1.4-3        armel        NTLM authentication library
+ii  libogg0:armel  1.3.2-1      armel        Ogg bitstream library
+ii  libp11-kit0:ar 0.20.7-1     armel        Library for loading and coordinat
+ii  libpam-modules 1.1.8-3.1+de armel        Pluggable Authentication Modules 
+ii  libpam-modules 1.1.8-3.1+de armel        Pluggable Authentication Modules 
+ii  libpam-runtime 1.1.8-3.1+de all          Runtime support for the PAM libra
+ii  libpam0g:armel 1.1.8-3.1+de armel        Pluggable Authentication Modules 
+ii  libparson0:arm 0.0.0        armel        lighweight json library
+ii  libpci3:armel  1:3.2.1-3    armel        Linux PCI Utilities (shared libra
+ii  libpcre3:armel 2:8.35-3.3+d armel        Perl 5 Compatible Regular Express
+ii  libperl5.20    5.20.2-3+deb armel        shared Perl library
+ii  libpng12-0:arm 1.2.50-2+deb armel        PNG library - runtime
+ii  libpococrypto5 1.8.1-netgea armel        C++ Portable Components (POCO) Cr
+ii  libpocodata50: 1.8.1-netgea armel        C++ Portable Components (POCO) Da
+ii  libpocodatasql 1.8.1-netgea armel        C++ Portable Components (POCO) Da
+ii  libpocofoundat 1.8.1-netgea armel        C++ Portable Components (POCO) Fo
+ii  libpocojson50: 1.8.1-netgea armel        C++ Portable Components (POCO) JS
+ii  libpoconet50:a 1.8.1-netgea armel        C++ Portable Components (POCO) Ne
+ii  libpoconetssl5 1.8.1-netgea armel        C++ Portable Components (POCO) Ne
+ii  libpocoutil50: 1.8.1-netgea armel        C++ Portable Components (POCO) Ut
+ii  libpocoxml50:a 1.8.1-netgea armel        C++ Portable Components (POCO) XM
+ii  libpopt0:armel 1.16-10      armel        lib for parsing cmdline parameter
+ii  libprocps3:arm 2:3.3.9-9+de armel        library for accessing process inf
+ii  libprotobuf-c1 1.0.2-1      armel        Protocol Buffers C shared library
+ii  libproxy1:arme 0.4.11-4+b2  armel        automatic proxy configuration man
+rc  libpython2.7-m 2.7.9-2+deb8 armel        Minimal subset of the Python lang
+ii  libraw10:armel 0.16.0-9+deb armel        raw image decoder library
+ii  librddclient   5903         armel        ReadyNAS system control daemon cl
+ii  libreadline6:a 6.3-8+b3     armel        GNU readline and history librarie
+ii  librnimage1    1.0.1        armel        ReadyNAS Imaging library
+ii  libsasl2-2:arm 2.1.26.dfsg1 armel        Cyrus SASL - authentication abstr
+ii  libsasl2-modul 2.1.26.dfsg1 armel        Cyrus SASL - pluggable authentica
+ii  libseccomp2:ar 2.2.3-3~bpo8 armel        high level interface to Linux sec
+ii  libselinux1:ar 2.3-2        armel        SELinux runtime shared libraries
+ii  libsemanage-co 2.3-1        all          Common files for SELinux policy m
+ii  libsemanage1:a 2.3-1+b1     armel        SELinux policy management library
+ii  libsensors4:ar 1:3.4.0-4.ne armel        library to read temperature/volta
+ii  libsepol1:arme 2.3-2        armel        SELinux library for manipulating 
+ii  libsgutils2-2: 1.42-2.netge armel        utilities for devices using the S
+ii  libslang2:arme 2.3.0-2      armel        S-Lang programming library - runt
+ii  libsmartcols1: 2.25.2-6.net armel        smart column output alignment lib
+ii  libsmbclient:a 2:4.8.0-12.n armel        shared library for communication 
+ii  libsnmp-base   5.7.2.1+dfsg all          SNMP configuration script, MIBs a
+ii  libsnmp30:arme 5.7.2.1+dfsg armel        SNMP (Simple Network Management P
+ii  libsoup2.4-1:a 2.48.0-1+deb armel        HTTP library implementation in C 
+ii  libsqlite3-0:a 3.25.2-0.net armel        SQLite 3 shared library
+ii  libss2:armel   1.42.13-1.ne armel        command-line interface parsing li
+rc  libssh2-1:arme 1.4.3-4.1+de armel        SSH2 client-side library
+ii  libssl1.0.0:ar 1.0.1t-1+deb armel        Secure Sockets Layer toolkit - sh
+ii  libstdc++6:arm 4.9.2-10+deb armel        GNU Standard C++ Library v3
+ii  libstemmer0d:a 0+svn585-1   armel        Snowball stemming algorithms for 
+ii  libsubunit0:ar 0.0.18-4     armel        Unit testing protocol - C/C++ sha
+ii  libswresample2 7:3.4.4-netg armel        FFmpeg audio rescaling library.
+ii  libswscale4:ar 7:3.4.4-netg armel        FFmpeg video scaling library.
+ii  libsystemd0:ar 230-7~bpo8+2 armel        systemd utility library
+ii  libtalloc2:arm 2.1.11-0.net armel        hierarchical pool based memory al
+ii  libtasn1-6:arm 4.2-3+deb8u3 armel        Manage ASN.1 structures (runtime)
+ii  libtdb1:armel  1.3.15-0.net armel        Trivial Database - shared library
+ii  libtevent0:arm 0.9.36-0.net armel        talloc-based event loop library -
+ii  libtext-charwi 0.04-7+b3    armel        get display widths of characters 
+ii  libtext-iconv- 1.7-5+b2     armel        converts between character sets i
+ii  libtext-wrapi1 0.06-7       all          internationalized substitute of T
+ii  libtiff5:armel 4.0.3-12.3+d armel        Tag Image File Format (TIFF) libr
+ii  libtinfo5:arme 5.9+20140913 armel        shared low-level terminfo library
+ii  libtirpc1:arme 0.2.5-1+deb8 armel        transport-independent RPC library
+ii  libtracker-con 1.12.3-0.net armel        library to control/monitor tracke
+ii  libtracker-min 1.12.3-0.net armel        tracker data miner library
+ii  libtracker-spa 1.12.3-0.net armel        metadata database, indexer and se
+ii  libudev1:armel 230-7~bpo8+2 armel        libudev shared library
+ii  libunistring0: 0.9.3-5.2+b1 armel        Unicode string library for C
+ii  libupsclient4: 2.7.4-3.netg armel        network UPS tools - client librar
+ii  liburiparser1: 0.8.4-1+deb9 armel        URI parsing library compliant wit
+ii  libusb-0.1-4:a 2:0.1.12-25+ armel        userspace USB programming library
+ii  libusb-1.0-0:a 2:1.0.19-1   armel        userspace USB programming library
+ii  libustr-1.0-1: 1.0.4-3+b2   armel        Micro string library: shared libr
+ii  libuuid1:armel 2.25.2-6.net armel        Universally Unique ID library
+ii  libvorbis0a:ar 1.3.4-2+deb8 armel        decoder library for Vorbis Genera
+ii  libvorbisfile3 1.3.4-2+deb8 armel        high-level API for Vorbis General
+ii  libwbclient0:a 2:4.8.0-12.n armel        Samba winbind client library
+ii  libwrap0:armel 7.6.q-25     armel        Wietse Venema's TCP wrappers libr
+ii  libxml2:armel  2.9.1+dfsg1- armel        GNOME XML library
+ii  libxtables10   1.4.21-2+b1  armel        netfilter xtables library
+ii  linux-image    4.4.218-6100 armel        Linux kernel image
+ii  login          1:4.2-3+deb8 armel        system login tools
+ii  logrotate      3.8.7-1+b1   armel        Log rotation utility
+ii  lsb-base       4.1+Debian13 all          Linux Standard Base 4.1 init scri
+ii  lsof           4.86+dfsg-1. armel        Utility to list open files
+ii  lsyncd         2.1.5-2      armel        daemon to synchronize local direc
+ii  lua5.1         5.1.5-7.1    armel        Simple, extensible, embeddable pr
+ii  lzop           1.03-3       armel        fast compression program
+ii  mawk           1.3.3-17     armel        a pattern scanning and text proce
+ii  mdadm          4.1-0.netgea armel        tool to administer Linux MD array
+ii  mime-support   3.58         all          MIME files 'mime.types' & 'mailca
+ii  minidlna       1.3.2-netgea armel        lightweight DLNA/UPnP-AV server t
+ii  minissdpd      1.4-netgear5 armel        keep memory of all UPnP devices t
+ii  mount          2.25.2-6.net armel        Tools for mounting and manipulati
+ii  msmtp          1.6.8-netgea armel        light SMTP client with support fo
+ii  multiarch-supp 2.19-18+deb8 armel        Transitional package to ensure mu
+ii  ncftp          2:3.2.5-1.1  armel        User-friendly and well-featured F
+ii  ncurses-base   5.9+20140913 all          basic terminal type definitions
+ii  ncurses-bin    5.9+20140913 armel        terminal-related programs and man
+ii  net-tools      1.60-26+b1   armel        NET-3 networking toolkit
+ii  netatalk       3.1.12-netge armel        AppleTalk user binaries
+ii  netbase        5.3          all          Basic TCP/IP networking system
+ii  nfs-common     1:1.2.8-9    armel        NFS support files common to clien
+ii  nfs-kernel-ser 1:1.2.8-9    armel        support for NFS kernel server
+ii  noflushd       2.8.netgear1 armel        allow idle hard disks to spin dow
+ii  ntfsprogs      1:2014.2.15A armel        NTFS file system utilities
+ii  ntpdate        1:4.2.6.p5+d armel        client for setting system time fr
+ii  nut            2.7.4-3.netg all          network UPS tools - metapackage
+ii  nut-client     2.7.4-3.netg armel        network UPS tools - clients
+ii  nut-server     2.7.4-3.netg armel        network UPS tools - core system
+ii  nut-snmp       2.7.4-3.netg armel        network UPS tools - SNMP driver
+hi  openssh-client 1:6.7p1-5+de armel        secure shell (SSH) client, for se
+hi  openssh-server 1:6.7p1-5+de armel        secure shell (SSH) server, for se
+hi  openssh-sftp-s 1:6.7p1-5+de armel        secure shell (SSH) sftp server mo
+ii  openssl        1.0.1t-1+net armel        Secure Sockets Layer toolkit - cr
+ii  passwd         1:4.2-3+deb8 armel        change and administer password an
+ii  perl-base      5.20.2-3+deb armel        minimal Perl system
+ii  perl-modules   5.20.2-3+deb all          Core Perl modules
+ii  procps         2:3.3.9-9+de armel        /proc file system utilities
+ii  proftpd        1.3.6-netgea armel        Versatile, virtual-hosting FTP da
+ii  psmisc         22.21-2.netg armel        utilities that use the proc file 
+ii  pwauth         2.3.11-0.1.n armel        authenticator for mod_authnz_exte
+rc  python2.7      2.7.9-2+deb8 armel        Interactive high-level object-ori
+rc  python2.7-mini 2.7.9-2+deb8 armel        Minimal subset of the Python lang
+ii  radar          1.0.6-0      armel        ReadyNAS Discovery Agent
+ii  raidar         1.1.10       armel        ReadyNAS discovery service
+ii  readline-commo 6.3-8        all          GNU readline and history librarie
+ii  readynas-agent 1.0          armel        ReadyNAS SNMP agent
+ii  readynasos     6.10.10      all          ReadyNASOS base system
+ii  readysync      1.3.0+610090 armel        ReadySync
+ii  readytivo      1.4.0        armel        TiVo recording archiver daemon
+ii  replicate      1.3.0-2      armel        Replicate Backup
+ii  rn-dictionary  20210107     all          ReadyNASOS language strings
+ii  rpcbind        0.2.1-6+deb8 armel        converts RPC program numbers into
+ii  rrd-tool       1.6.0-netgea armel        minimal time-series data storage 
+ii  rsync          3.1.3-1.netg armel        fast, versatile, remote (and loca
+ii  samba          2:4.8.0-12.n armel        SMB/CIFS file, print, and login s
+ii  samba-common   2:4.8.0-12.n all          common files used by both the Sam
+ii  samba-common-b 2:4.8.0-12.n armel        Samba 4 common files used by both
+ii  samba-libs:arm 2:4.8.0-12.n armel        Samba core libraries
+ii  samba-vfs-modu 2:4.8.0-12.n armel        Samba Virtual FileSystem plugins
+ii  sed            4.2.2-4+deb8 armel        The GNU sed stream editor
+ii  sensible-utils 0.0.9+deb8u1 all          Utilities for sensible alternativ
+ii  sg3-utils      1.42-2.netge armel        utilities for devices using the S
+ii  shared-mime-in 1.3-1        armel        FreeDesktop.org shared MIME datab
+ii  smartmontools  6.6-netgear1 armel        control and monitor storage syste
+ii  smbclient      2:4.8.0-12.n armel        command-line SMB/CIFS clients for
+ii  snapper        0.6.0-netgea armel        Linux filesystem snapshot managem
+ii  snmpd          5.7.2.1+dfsg armel        SNMP (Simple Network Management P
+ii  sqlite3        3.25.2-0.net armel        Command line interface for SQLite
+ii  startpar       0.59-3       armel        run processes in parallel and mul
+ii  systemd        230-7~bpo8+2 armel        system and service manager
+ii  systemd-sysv   230-7~bpo8+2 armel        system and service manager - SysV
+ii  sysv-rc        2.88dsf-59   all          System-V-like runlevel change mec
+ii  sysvinit-utils 2.88dsf-59   armel        System-V-like utilities
+ii  tar            1.27.1-2+deb armel        GNU version of the tar archiving 
+ii  target-isns    0.6.5-netgea armel        An iSNS client for the Linux LIO 
+ii  tracker        1.12.3-0.net armel        metadata database, indexer and se
+ii  tracker-extrac 1.12.3-0.net armel        metadata database, indexer and se
+ii  tracker-miner- 1.12.3-0.net armel        metadata database, indexer and se
+ii  ttf-bitstream- 1.10-8       all          The Bitstream Vera family of free
+ii  tzdata         2019c-0+deb8 all          time zone and daylight-saving tim
+ii  ucf            3.0030       all          Update Configuration File(s): pre
+ii  udev           230-7~bpo8+2 armel        /dev/ and hotplug management daem
+ii  udhcpc         1:1.22.0-9+d armel        Provides the busybox DHCP client 
+ii  util-linux     2.25.2-6.net armel        Miscellaneous system utilities
+ii  uuid-runtime   2.25.2-6.net armel        runtime components for the Univer
+ii  vault          6.3.1        armel        ReadyNAS Vault
+ii  vim-common     2:7.4.488-7+ armel        Vi IMproved - Common files
+ii  vim-tiny       2:7.4.488-7+ armel        Vi IMproved - enhanced vi editor 
+ii  wget           1.16-1+deb8u armel        retrieves files from the web
+ii  winbind        2:4.8.0-12.n armel        service to resolve user and group
+ii  wsdd2          1.8          armel        Web Services for Devices (WSD) da
+ii  xagent         3.2.7-1      armel        XCloud Agent
+ii  xz-utils       5.1.1alpha+2 armel        XZ-format compression utilities
+ii  zip            3.0-8        armel        Archiver for .zip files
+ii  zlib1g:armel   1:1.2.8.dfsg armel        compression library - runtime
+
